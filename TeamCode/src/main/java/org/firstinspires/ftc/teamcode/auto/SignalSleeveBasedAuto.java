@@ -109,7 +109,7 @@ public class SignalSleeveBasedAuto extends LinearOpMode {
 
         // move forward more to adjust position | move to wall
         this.runtime.reset();
-        while ((this.runtime.milliseconds() < 2000) &&
+        while ((this.runtime.milliseconds() < 1500) &&
                 (this.scheduled_zone == 3)) {
             telemetry.addData("Status","Adjusting x-axis location");
             telemetry.addData("Heading", this.navx.Heading());
@@ -122,7 +122,7 @@ public class SignalSleeveBasedAuto extends LinearOpMode {
         // route if zone is 1 | goes to zone 1
         this.runtime.reset();
         while ((this.scheduled_zone == 1) &&
-                (this.runtime.milliseconds() < 2000) &&
+                (this.runtime.milliseconds() < 1500) &&
                 (this.elapsedTime.seconds() < Constants.Time.autoTime)) {
             telemetry.addData("Status","Moving toward the left");
             telemetry.addData("Heading", navx.Heading());
@@ -136,7 +136,7 @@ public class SignalSleeveBasedAuto extends LinearOpMode {
         // strafe for a short time to fit into zones
         this.runtime.reset();
         while ((this.scheduled_zone == 3) &&
-                (this.runtime.milliseconds() < 1500) &&
+                (this.runtime.milliseconds() < 850) &&
                 (this.elapsedTime.seconds() < Constants.Time.autoTime)) {
             telemetry.addData("Status","Moving toward the left");
             telemetry.addData("Heading", navx.Heading());
