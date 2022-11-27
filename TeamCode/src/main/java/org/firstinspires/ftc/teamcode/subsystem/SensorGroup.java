@@ -48,10 +48,10 @@ public class SensorGroup {
             if (this.Green() > (this.Red() + this.Blue()) * 0.75) {
                 return 3;
             }
-            if (this.Blue() > (this.Red() + this.Green()) * 0.75) {
-                return 2;
+            if (this.Blue() > ((this.Red()*0.75) + (this.Green()* 0.25))) {
+                return 1;
             }
-            return 1;
+            return 2;
         }
         return 0;
     }
