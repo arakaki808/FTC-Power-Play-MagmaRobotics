@@ -33,6 +33,11 @@ public class MainTeleop extends OpMode {
 
         telemetry.addData("Status", "Initialized");
     }
+    
+    @Override
+    public void start() {
+        this.runtime.reset();
+    }
 
 
     @Override
