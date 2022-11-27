@@ -46,10 +46,10 @@ public class MecanumDrive {
 
     // strafe drive
     public void setStrafe(double leftPower, double rightPower) {
-        this.leftFront.setPower(-leftPower);
-        this.leftBack.setPower(leftPower);
-        this.rightFront.setPower(rightPower);
-        this.rightBack.setPower(rightPower);
+        this.leftFront.setPower(leftPower);
+        this.leftBack.setPower(-leftPower);
+        this.rightFront.setPower(-rightPower);
+        this.rightBack.setPower(-rightPower);
     }
 
 
