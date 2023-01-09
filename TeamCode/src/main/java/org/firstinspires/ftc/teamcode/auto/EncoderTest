@@ -44,12 +44,16 @@ public class EncoderSignalPark extends LinearOpMode {
             this.telemetry.addData("Status","Adjusting y-axis location");
             this.telemetry.addData("Encoder", this.drive.Pos());
             this.telemetry.update();
+            if (!(sensor.Zone() == 0)) {
+                this.scheduled_zone = sensor.Zone();
+                }
         }
+        
         this.drive.stop();
         this.drive.resetEncoder();
         this.drive.disableEncoder();
-
-
+        
+       
         this.runtime.reset();
         while (runtime.milliseconds() < 1000) {
             this.telemetry.addData("Status","Adjusting y-axis location");
